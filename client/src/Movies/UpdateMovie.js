@@ -6,7 +6,7 @@ const initialMovie = {
     title:"",
     director:"",
     metascore:"",
-    stars:[""]
+    stars:[]
 }
 
 const UpdateMovie =props =>{
@@ -31,7 +31,11 @@ const UpdateMovie =props =>{
         if( event.target.name === "metascore") {
             value = parseInt(value, 10)
         }
-
+        if( event.target.name === "stars") {
+            value = value.split(",")
+        }
+        // console.log(event.target.name)
+        // console.log(event.target.value)
         setMovie({
             ...movie,
             [event.target.name]: value
@@ -96,7 +100,7 @@ const UpdateMovie =props =>{
                         onChange={handleChange}
                     />
                 </label>
-                {!movie.stars && (
+                {/* {!movie.stars && (
                     <label>Actor:&nbsp;
                         <input 
                             name="stars"
@@ -121,7 +125,16 @@ const UpdateMovie =props =>{
                             </label>
                         )
                     })
-                )}
+                )} */}
+                <label>Actors:&nbsp;
+                        <input 
+                            name="stars"
+                            value={movie.stars}
+                            type="text"
+                            placeholder="Actors"
+                            onChange={handleChange}
+                        />
+                </label>
                 <button className="update-form-button"> Update</button>
             </form>
         </div>
