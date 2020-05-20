@@ -75,3 +75,60 @@ body {
   color: red;
   text-align: center;
 }
+
+.update-button {
+  position: absolute;
+  top: 110px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+.update-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.delete-button {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+.delete-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.update-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.update-form label {
+  width: 50%;
+  margin: 15px auto;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.update-form label input {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.update-form-button {
+  position: relative;
+  width: 20%;
+  margin: auto;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+
+.update-form-button:hover {
+  background-color: green;
+  color: white;
+}
